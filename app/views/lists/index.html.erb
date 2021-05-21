@@ -1,1 +1,6 @@
-<h1> here all the movies lists </h1>
+<%= link_to 'Create a movie list', new_list_path, class: 'btn btn-flat' %>
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list), class:'text-decoration-none' do %>
+      <%= list.name %>
+    <% end %>
+  <% end %>
